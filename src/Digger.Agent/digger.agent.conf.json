@@ -1,0 +1,41 @@
+﻿{
+  "dispatcherType": "Digger.Agent.Dispatchers.QueuedInProcessDispatcher, Digger.Agent",
+  "processors": {
+    "influxDb": {
+      "host": "http://192.168.0.176:8086",
+      "database": "digger"
+    }
+  },
+  "collectors": [
+    {
+      "type": "PerformanceCounterCollector",
+      "name": "cpuPctTotal",
+      "collectInterval": "00:00:01.000",
+      "performanceCounterConfig": {
+        "categoryName": "Processor",
+        "counterName": "% Processor Time",
+        "instanceName": "_Total"
+      }
+    },
+    {
+      "type": "PerformanceCounterCollector",
+      "name": "ramAvailableMb",
+      "collectInterval": "00:00:01.000",
+      "performanceCounterConfig": {
+        "categoryName": "Memory",
+        "counterName": "Available MBytes"
+      }
+    },
+    {
+      "type": "WinServiceStatusCollector",
+      "name": "serviceStatus",
+      "collectInterval": "00:00:15.000",
+      "includeProcessInfo": true,
+      "serviceNames": [ "MSSQL$SQLEXPRESS2014", "AdobeARMservice" ]
+    },
+    {
+      "type": "WebHooksCollector",
+      "baseAddress": "http://127.0.0.1:62333"
+    }
+  ]
+}

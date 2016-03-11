@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger.Agent", "Digger.Agent\Digger.Agent.csproj", "{DE189662-492F-46B5-9C9A-F3A5504B0305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger", "Digger\Digger.csproj", "{AA43CA97-8666-4F43-84C4-89C187FEDB66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19C48546-9A90-4A69-A208-82C13B3EF2B3}"
+	ProjectSection(SolutionItems) = preProject
+		GlobalAssemblyInfo.cs = GlobalAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger.Collectors.PerformanceCounters", "Digger.Collectors.PerformanceCounters\Digger.Collectors.PerformanceCounters.csproj", "{7A319747-6F9A-4BC4-AD02-A741EA8D477F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger.Collectors.WinServices", "Digger.Collectors.Services\Digger.Collectors.WinServices.csproj", "{F572967A-95BC-44C7-8726-44A2F44B93AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger.Collectors.WebHooks", "Digger.Collectors.WebHooks\Digger.Collectors.WebHooks.csproj", "{0D06DDDB-08A1-454F-99C4-2566630B552C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digger.Processors.InfluxDb", "Digger.Processors.InfluxDb\Digger.Processors.InfluxDb.csproj", "{E9DAB3C5-3814-4B49-9E32-8A34392FAE3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE189662-492F-46B5-9C9A-F3A5504B0305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE189662-492F-46B5-9C9A-F3A5504B0305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE189662-492F-46B5-9C9A-F3A5504B0305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE189662-492F-46B5-9C9A-F3A5504B0305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA43CA97-8666-4F43-84C4-89C187FEDB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA43CA97-8666-4F43-84C4-89C187FEDB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA43CA97-8666-4F43-84C4-89C187FEDB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA43CA97-8666-4F43-84C4-89C187FEDB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A319747-6F9A-4BC4-AD02-A741EA8D477F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A319747-6F9A-4BC4-AD02-A741EA8D477F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A319747-6F9A-4BC4-AD02-A741EA8D477F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A319747-6F9A-4BC4-AD02-A741EA8D477F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F572967A-95BC-44C7-8726-44A2F44B93AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F572967A-95BC-44C7-8726-44A2F44B93AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F572967A-95BC-44C7-8726-44A2F44B93AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F572967A-95BC-44C7-8726-44A2F44B93AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D06DDDB-08A1-454F-99C4-2566630B552C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D06DDDB-08A1-454F-99C4-2566630B552C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D06DDDB-08A1-454F-99C4-2566630B552C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D06DDDB-08A1-454F-99C4-2566630B552C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9DAB3C5-3814-4B49-9E32-8A34392FAE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DAB3C5-3814-4B49-9E32-8A34392FAE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DAB3C5-3814-4B49-9E32-8A34392FAE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DAB3C5-3814-4B49-9E32-8A34392FAE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
