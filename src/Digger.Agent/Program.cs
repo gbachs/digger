@@ -10,6 +10,7 @@ namespace Digger.Agent
 
             HostFactory.New(x =>
             {
+                x.UseSerilog();
                 x.Service<AgentService>(sc =>
                 {
                     sc.ConstructUsing(AgentRuntime.Resolve<AgentService>);

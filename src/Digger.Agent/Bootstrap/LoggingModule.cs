@@ -8,13 +8,13 @@ namespace Digger.Agent.Bootstrap
     {
         public override void Load()
         {
-            var logger = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .Enrich.WithThreadId()
                 .ReadFrom.AppSettings()
                 .CreateLogger();
 
-            LoggerFactory.Resolve = t => new SerilogLogger(logger.ForContext(t));
+            LoggerFactory.Resolve = t => new SerilogLogger(Log.Logger.ForContext(t));
 
             Kernel
                 .Bind<LoggerResolver>()
