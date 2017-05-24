@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Digger.Extensions;
-using EnsureThat;
 
 namespace Digger
 {
@@ -21,10 +20,6 @@ namespace Digger
 
         protected AsyncPollingCollectorBase(string name, TimeSpan collectInterval, IDispatcher dispatcher, ILogger logger)
         {
-            Ensure.That(name, nameof(name)).IsNotNullOrWhiteSpace();
-            Ensure.That(dispatcher, nameof(dispatcher)).IsNotNull();
-            Ensure.That(logger, nameof(logger)).IsNotNull();
-
             Name = name;
             CollectInterval = collectInterval;
             Logger = logger;

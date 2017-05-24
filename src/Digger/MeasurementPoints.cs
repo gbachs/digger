@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using EnsureThat;
 
 namespace Digger
 {
@@ -24,8 +23,6 @@ namespace Digger
 
         public MeasurementPoints Add(IEnumerable<MeasurementPoint> points)
         {
-            Ensure.That(points, nameof(points)).IsNotNull();
-
             _points.AddRange(points);
 
             return this;

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using EnsureThat;
 
 namespace Digger
 {
@@ -21,8 +20,6 @@ namespace Digger
 
         public MeasurementPoint(string measurement)
         {
-            Ensure.That(measurement, nameof(measurement)).IsNotNullOrWhiteSpace();
-
             _tags = new Dictionary<string, string>();
             _valueTypeFields = new Dictionary<string, ValueType>();
             _stringFields = new Dictionary<string, string>();
@@ -33,8 +30,6 @@ namespace Digger
 
         public MeasurementPoint AddTag(string name, string value)
         {
-            Ensure.That(name, nameof(name)).IsNotNullOrWhiteSpace();
-
             _tags.Add(name, value);
 
             return this;
@@ -72,8 +67,6 @@ namespace Digger
 
         public MeasurementPoint AddField(string name, string value)
         {
-            Ensure.That(name, nameof(name)).IsNotNullOrWhiteSpace();
-
             _stringFields.Add(name, value);
 
             return this;
@@ -81,8 +74,6 @@ namespace Digger
 
         private MeasurementPoint AddValueTypeField(string name, ValueType value)
         {
-            Ensure.That(name, nameof(name)).IsNotNullOrWhiteSpace();
-
             _valueTypeFields.Add(name, value);
 
             return this;

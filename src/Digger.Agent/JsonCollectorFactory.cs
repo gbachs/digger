@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Digger.Collectors.PerformanceCounters;
-using Digger.Collectors.WebHooks;
 using Digger.Collectors.WinServices;
 using EnsureThat;
 using Newtonsoft.Json.Linq;
@@ -29,7 +28,6 @@ namespace Digger.Agent
             var collectors = new List<ICollector>();
             collectors.AddRange(CreatePerformanceCounterCollectors(_collectorsJson));
             collectors.AddRange(CreateWinServiceStatusCollectors(_collectorsJson));
-            collectors.AddRange(CreateWebHooksCollectors(_collectorsJson));
 
             return collectors;
         }
@@ -54,16 +52,6 @@ namespace Digger.Agent
                     collectorConfig,
                     _dispatcher,
                     _loggerResolver(typeof(WinServiceStatusCollector))));
-        }
-
-        private IEnumerable<WebHooksCollector> CreateWebHooksCollectors(IEnumerable<JToken> collectors)
-        {
-            return collectors
-                .Where(collector => collector["type"].ToObject<string>() == nameof(WebHooksCollector))
-                .Select(c => c.ToObject<WebHooksCollectorConfig>())
-                .Select(collectorConfig => new WebHooksCollector(
-                    collectorConfig.BaseAddress,
-                    AgentRuntime.Resolve));
         }
     }
 }
